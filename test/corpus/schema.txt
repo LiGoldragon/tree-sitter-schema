@@ -1,0 +1,124 @@
+==================
+Schema source shape
+==================
+
+{}
+[(Record Entry) (Watch WatchRequest opens RecordStream)]
+[Recorded (Rejected Rejection)]
+{
+  Topic String
+  Entry { topic Topic body String tags (Vec Topic) byTopic (Map (Topic RecordIdentifier)) }
+  RuntimeEvent [(RecordChanged RecordChanged belongs RecordStream)]
+  RecordStream (Stream { token SubscriptionToken opened SubscriptionReceipt event RuntimeEvent close SubscriptionToken })
+  EntryFamily (Family { record Entry table entries key Domain })
+  Digest (Bytes 32)
+}
+[(Equivalence [(RuntimeEvent RecordChanged) Topic])]
+
+---
+
+(source_file
+  imports: (imports)
+  input: (root_enum
+    (variant_signature
+      (data_variant
+        name: (variant_name (name))
+        payload: (variant_payload
+          (plain_reference name: (name)))))
+    (variant_signature
+      (streaming_variant
+        name: (variant_name (name))
+        payload: (variant_payload
+          (plain_reference name: (name)))
+        relation: (stream_relation_keyword)
+        stream: (variant_name (name)))))
+  output: (root_enum
+    (variant_signature
+      (unit_variant
+        name: (variant_name (name))))
+    (variant_signature
+      (data_variant
+        name: (variant_name (name))
+        payload: (variant_payload
+          (plain_reference name: (name))))))
+  namespace: (namespace
+    (namespace_entry
+      name: (name)
+      value: (plain_reference name: (name)))
+    (namespace_entry
+      name: (name)
+      value: (struct_declaration
+        (field_declaration
+          name: (name)
+          value: (plain_reference name: (name)))
+        (field_declaration
+          name: (name)
+          value: (plain_reference name: (name)))
+        (field_declaration
+          name: (name)
+          value: (vector_reference
+            head: (vector_keyword)
+            item: (plain_reference name: (name))))
+        (field_declaration
+          name: (name)
+          value: (map_reference
+            head: (map_keyword)
+            pair: (map_reference_pair
+              key: (plain_reference name: (name))
+              value: (plain_reference name: (name)))))))
+    (namespace_entry
+      name: (name)
+      value: (enum_declaration
+        (variant_signature
+          (streaming_variant
+            name: (variant_name (name))
+            payload: (variant_payload
+              (plain_reference name: (name)))
+            relation: (stream_relation_keyword)
+            stream: (variant_name (name))))))
+    (namespace_entry
+      name: (name)
+      value: (stream_declaration
+        head: (stream_keyword)
+        body: (stream_body
+          (stream_field
+            key: (stream_field_key)
+            value: (plain_reference name: (name)))
+          (stream_field
+            key: (stream_field_key)
+            value: (plain_reference name: (name)))
+          (stream_field
+            key: (stream_field_key)
+            value: (plain_reference name: (name)))
+          (stream_field
+            key: (stream_field_key)
+            value: (plain_reference name: (name))))))
+    (namespace_entry
+      name: (name)
+      value: (family_declaration
+        head: (family_keyword)
+        body: (family_body
+          (family_field
+            key: (family_field_key)
+            value: (plain_reference name: (name)))
+          (family_field
+            key: (family_field_key)
+            value: (table_name))
+          (family_field
+            key: (family_field_key)
+            value: (family_key)))))
+    (namespace_entry
+      name: (name)
+      value: (bytes_reference
+        head: (bytes_keyword)
+        width: (integer))))
+  relations: (relations
+    (relation
+      name: (relation_keyword)
+      values: (relation_values
+        (relation_value
+          (relation_path
+            (name)
+            (name)))
+        (relation_value
+          (name))))))

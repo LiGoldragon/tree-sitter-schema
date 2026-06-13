@@ -1,0 +1,55 @@
+{
+  "name": "sema-schema-language-vscodium",
+  "displayName": "SEMA Schema Language",
+  "description": "Language registration and theme defaults for tree-sitter SEMA schema highlighting in VSCodium.",
+  "version": "0.1.0",
+  "publisher": "LiGoldragon",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["Programming Languages"],
+  "extensionDependencies": ["AlecGhost.tree-sitter-vscode"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "schema",
+        "aliases": ["SEMA Schema", "schema"],
+        "extensions": [".schema"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "configurationDefaults": {
+      "[schema]": {
+        "editor.semanticHighlighting.enabled": true
+      },
+      "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+        "rules": {
+          "*.schema:type": {
+            "foreground": "#4EC9B0",
+            "fontStyle": "bold"
+          },
+          "*.schema:enum": {
+            "foreground": "#C586C0",
+            "fontStyle": "bold"
+          },
+          "*.schema:namespace": {
+            "foreground": "#9CDCFE",
+            "fontStyle": "bold"
+          },
+          "*.schema:property": "#D7BA7D",
+          "*.schema:parameter": "#B5CEA8",
+          "*.schema:macro": {
+            "foreground": "#DCDCAA",
+            "fontStyle": "bold"
+          },
+          "*.schema:keyword": "#C586C0",
+          "*.schema:string": "#CE9178",
+          "*.schema:number": "#B5CEA8",
+          "*.schema:comment": "#6A9955",
+          "*.schema:operator": "#D4D4D4"
+        }
+      }
+    }
+  }
+}

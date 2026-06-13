@@ -1,0 +1,1448 @@
+[
+  {
+    "type": "bytes_reference",
+    "named": true,
+    "fields": {
+      "head": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bytes_keyword",
+            "named": true
+          }
+        ]
+      },
+      "width": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "integer",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "data_variant",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "variant_name",
+            "named": true
+          }
+        ]
+      },
+      "payload": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "variant_payload",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "derived_member",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "bytes_reference",
+          "named": true
+        },
+        {
+          "type": "map_reference",
+          "named": true
+        },
+        {
+          "type": "optional_reference",
+          "named": true
+        },
+        {
+          "type": "plain_reference",
+          "named": true
+        },
+        {
+          "type": "scope_reference",
+          "named": true
+        },
+        {
+          "type": "vector_reference",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enum_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "variant_signature",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "family_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "family_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "family_declaration",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "family_body",
+            "named": true
+          }
+        ]
+      },
+      "head": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "family_keyword",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "family_field",
+    "named": true,
+    "fields": {
+      "key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "family_field_key",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bytes_reference",
+            "named": true
+          },
+          {
+            "type": "family_key",
+            "named": true
+          },
+          {
+            "type": "map_reference",
+            "named": true
+          },
+          {
+            "type": "optional_reference",
+            "named": true
+          },
+          {
+            "type": "plain_reference",
+            "named": true
+          },
+          {
+            "type": "scope_reference",
+            "named": true
+          },
+          {
+            "type": "table_name",
+            "named": true
+          },
+          {
+            "type": "vector_reference",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "family_field_key",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "field_declaration",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bytes_reference",
+            "named": true
+          },
+          {
+            "type": "derived_marker",
+            "named": true
+          },
+          {
+            "type": "enum_declaration",
+            "named": true
+          },
+          {
+            "type": "map_reference",
+            "named": true
+          },
+          {
+            "type": "optional_reference",
+            "named": true
+          },
+          {
+            "type": "pipe_text",
+            "named": true
+          },
+          {
+            "type": "plain_reference",
+            "named": true
+          },
+          {
+            "type": "scope_reference",
+            "named": true
+          },
+          {
+            "type": "struct_declaration",
+            "named": true
+          },
+          {
+            "type": "vector_reference",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "import_entry",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      },
+      "source": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bytes_reference",
+            "named": true
+          },
+          {
+            "type": "map_reference",
+            "named": true
+          },
+          {
+            "type": "optional_reference",
+            "named": true
+          },
+          {
+            "type": "plain_reference",
+            "named": true
+          },
+          {
+            "type": "scope_reference",
+            "named": true
+          },
+          {
+            "type": "vector_reference",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "imports",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "import_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "macro_library",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "schema_macro",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "map_keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "map_reference",
+    "named": true,
+    "fields": {
+      "head": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "map_keyword",
+            "named": true
+          }
+        ]
+      },
+      "pair": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "map_reference_pair",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "map_reference_pair",
+    "named": true,
+    "fields": {
+      "key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bytes_reference",
+            "named": true
+          },
+          {
+            "type": "map_reference",
+            "named": true
+          },
+          {
+            "type": "optional_reference",
+            "named": true
+          },
+          {
+            "type": "plain_reference",
+            "named": true
+          },
+          {
+            "type": "scope_reference",
+            "named": true
+          },
+          {
+            "type": "vector_reference",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bytes_reference",
+            "named": true
+          },
+          {
+            "type": "map_reference",
+            "named": true
+          },
+          {
+            "type": "optional_reference",
+            "named": true
+          },
+          {
+            "type": "plain_reference",
+            "named": true
+          },
+          {
+            "type": "scope_reference",
+            "named": true
+          },
+          {
+            "type": "vector_reference",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "namespace",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "namespace_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "namespace_entry",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bytes_reference",
+            "named": true
+          },
+          {
+            "type": "enum_declaration",
+            "named": true
+          },
+          {
+            "type": "family_declaration",
+            "named": true
+          },
+          {
+            "type": "map_reference",
+            "named": true
+          },
+          {
+            "type": "optional_reference",
+            "named": true
+          },
+          {
+            "type": "pipe_text",
+            "named": true
+          },
+          {
+            "type": "plain_reference",
+            "named": true
+          },
+          {
+            "type": "scope_reference",
+            "named": true
+          },
+          {
+            "type": "stream_declaration",
+            "named": true
+          },
+          {
+            "type": "struct_declaration",
+            "named": true
+          },
+          {
+            "type": "vector_reference",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "optional_keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "optional_reference",
+    "named": true,
+    "fields": {
+      "head": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "optional_keyword",
+            "named": true
+          }
+        ]
+      },
+      "item": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bytes_reference",
+            "named": true
+          },
+          {
+            "type": "map_reference",
+            "named": true
+          },
+          {
+            "type": "optional_reference",
+            "named": true
+          },
+          {
+            "type": "plain_reference",
+            "named": true
+          },
+          {
+            "type": "scope_reference",
+            "named": true
+          },
+          {
+            "type": "vector_reference",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "plain_reference",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "raw_core_schema",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "raw_map",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "raw_map",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "raw_object",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "raw_object",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "atom",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "pipe_text",
+          "named": true
+        },
+        {
+          "type": "raw_map",
+          "named": true
+        },
+        {
+          "type": "raw_parenthesized",
+          "named": true
+        },
+        {
+          "type": "raw_vector",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "raw_parenthesized",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "raw_object",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "raw_vector",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "raw_object",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "relation",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "relation_keyword",
+            "named": true
+          }
+        ]
+      },
+      "values": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "relation_values",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "relation_path",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "relation_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "relation_path",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "relation_values",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "relation_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "relations",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "relation",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "root_enum",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "variant_signature",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "schema_macro",
+    "named": true,
+    "fields": {
+      "head": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "schema_macro_keyword",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      },
+      "pattern": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "raw_object",
+            "named": true
+          }
+        ]
+      },
+      "position": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      },
+      "template": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "raw_object",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "scope_keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "scope_reference",
+    "named": true,
+    "fields": {
+      "head": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "scope_keyword",
+            "named": true
+          }
+        ]
+      },
+      "item": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bytes_reference",
+            "named": true
+          },
+          {
+            "type": "map_reference",
+            "named": true
+          },
+          {
+            "type": "optional_reference",
+            "named": true
+          },
+          {
+            "type": "plain_reference",
+            "named": true
+          },
+          {
+            "type": "scope_reference",
+            "named": true
+          },
+          {
+            "type": "vector_reference",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "self_tagged_variant",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "variant_name",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {
+      "imports": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "imports",
+            "named": true
+          }
+        ]
+      },
+      "input": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "root_enum",
+            "named": true
+          }
+        ]
+      },
+      "namespace": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "namespace",
+            "named": true
+          }
+        ]
+      },
+      "output": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "root_enum",
+            "named": true
+          }
+        ]
+      },
+      "relations": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "relations",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "macro_library",
+          "named": true
+        },
+        {
+          "type": "raw_core_schema",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stream_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "stream_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stream_declaration",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "stream_body",
+            "named": true
+          }
+        ]
+      },
+      "head": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "stream_keyword",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "stream_field",
+    "named": true,
+    "fields": {
+      "key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "stream_field_key",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bytes_reference",
+            "named": true
+          },
+          {
+            "type": "map_reference",
+            "named": true
+          },
+          {
+            "type": "optional_reference",
+            "named": true
+          },
+          {
+            "type": "plain_reference",
+            "named": true
+          },
+          {
+            "type": "scope_reference",
+            "named": true
+          },
+          {
+            "type": "vector_reference",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "stream_field_key",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "stream_relation_keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "streaming_variant",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "variant_name",
+            "named": true
+          }
+        ]
+      },
+      "payload": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "variant_payload",
+            "named": true
+          }
+        ]
+      },
+      "relation": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "stream_relation_keyword",
+            "named": true
+          }
+        ]
+      },
+      "stream": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "variant_name",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "struct_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "derived_member",
+          "named": true
+        },
+        {
+          "type": "field_declaration",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unit_variant",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "variant_name",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "variant_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variant_payload",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "bytes_reference",
+          "named": true
+        },
+        {
+          "type": "enum_declaration",
+          "named": true
+        },
+        {
+          "type": "map_reference",
+          "named": true
+        },
+        {
+          "type": "optional_reference",
+          "named": true
+        },
+        {
+          "type": "pipe_text",
+          "named": true
+        },
+        {
+          "type": "plain_reference",
+          "named": true
+        },
+        {
+          "type": "scope_reference",
+          "named": true
+        },
+        {
+          "type": "struct_declaration",
+          "named": true
+        },
+        {
+          "type": "vector_reference",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variant_signature",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "data_variant",
+          "named": true
+        },
+        {
+          "type": "self_tagged_variant",
+          "named": true
+        },
+        {
+          "type": "streaming_variant",
+          "named": true
+        },
+        {
+          "type": "unit_variant",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "vector_keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "vector_reference",
+    "named": true,
+    "fields": {
+      "head": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "vector_keyword",
+            "named": true
+          }
+        ]
+      },
+      "item": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bytes_reference",
+            "named": true
+          },
+          {
+            "type": "map_reference",
+            "named": true
+          },
+          {
+            "type": "optional_reference",
+            "named": true
+          },
+          {
+            "type": "plain_reference",
+            "named": true
+          },
+          {
+            "type": "scope_reference",
+            "named": true
+          },
+          {
+            "type": "vector_reference",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "KeyValue",
+    "named": false
+  },
+  {
+    "type": "Map",
+    "named": false
+  },
+  {
+    "type": "Option",
+    "named": false
+  },
+  {
+    "type": "Optional",
+    "named": false
+  },
+  {
+    "type": "Scope",
+    "named": false
+  },
+  {
+    "type": "ScopeOf",
+    "named": false
+  },
+  {
+    "type": "Vec",
+    "named": false
+  },
+  {
+    "type": "Vector",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "atom",
+    "named": true
+  },
+  {
+    "type": "belongs",
+    "named": false
+  },
+  {
+    "type": "bytes_keyword",
+    "named": true
+  },
+  {
+    "type": "close",
+    "named": false
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "extra": true
+  },
+  {
+    "type": "derived_marker",
+    "named": true
+  },
+  {
+    "type": "event",
+    "named": false
+  },
+  {
+    "type": "family_key",
+    "named": true
+  },
+  {
+    "type": "family_keyword",
+    "named": true
+  },
+  {
+    "type": "integer",
+    "named": true
+  },
+  {
+    "type": "key",
+    "named": false
+  },
+  {
+    "type": "name",
+    "named": true
+  },
+  {
+    "type": "opened",
+    "named": false
+  },
+  {
+    "type": "opens",
+    "named": false
+  },
+  {
+    "type": "pipe_text",
+    "named": true
+  },
+  {
+    "type": "record",
+    "named": false
+  },
+  {
+    "type": "relation_keyword",
+    "named": true
+  },
+  {
+    "type": "schema_macro_keyword",
+    "named": true
+  },
+  {
+    "type": "stream_keyword",
+    "named": true
+  },
+  {
+    "type": "table",
+    "named": false
+  },
+  {
+    "type": "table_name",
+    "named": true
+  },
+  {
+    "type": "token",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "tree-sitter-vscode.languageConfigs": [
+    {
+      "lang": "schema",
+      "parser": "${workspaceFolder}/tree-sitter-schema.wasm",
+      "highlights": "${workspaceFolder}/queries/highlights.scm",
+      "folds": "${workspaceFolder}/queries/folds.scm",
+      "semanticTokenTypeMappings": {
+        "type.definition": {
+          "targetTokenType": "type",
+          "targetTokenModifiers": ["declaration"]
+        },
+        "type.enum.definition": {
+          "targetTokenType": "enum",
+          "targetTokenModifiers": ["declaration"]
+        },
+        "type.stream.definition": {
+          "targetTokenType": "namespace",
+          "targetTokenModifiers": ["declaration"]
+        },
+        "type.family.definition": {
+          "targetTokenType": "namespace",
+          "targetTokenModifiers": ["declaration", "readonly"]
+        },
+        "type.alias.definition": {
+          "targetTokenType": "type",
+          "targetTokenModifiers": ["declaration", "defaultLibrary"]
+        },
+        "type.builtin": {
+          "targetTokenType": "type",
+          "targetTokenModifiers": ["defaultLibrary"]
+        },
+        "type.stream": {
+          "targetTokenType": "namespace",
+          "targetTokenModifiers": ["readonly"]
+        },
+        "constructor": {
+          "targetTokenType": "enumMember"
+        },
+        "property.definition": {
+          "targetTokenType": "property",
+          "targetTokenModifiers": ["declaration"]
+        },
+        "property.builtin": {
+          "targetTokenType": "property",
+          "targetTokenModifiers": ["defaultLibrary"]
+        },
+        "function.macro": {
+          "targetTokenType": "macro"
+        },
+        "keyword.modifier": {
+          "targetTokenType": "keyword",
+          "targetTokenModifiers": ["modification"]
+        },
+        "constant.builtin": {
+          "targetTokenType": "enumMember",
+          "targetTokenModifiers": ["defaultLibrary"]
+        },
+        "string.special": {
+          "targetTokenType": "string",
+          "targetTokenModifiers": ["modification"]
+        },
+        "number": {
+          "targetTokenType": "number"
+        },
+        "string": {
+          "targetTokenType": "string"
+        },
+        "comment": {
+          "targetTokenType": "comment"
+        },
+        "punctuation.bracket": {
+          "targetTokenType": "operator"
+        }
+      }
+    }
+  ]
+}

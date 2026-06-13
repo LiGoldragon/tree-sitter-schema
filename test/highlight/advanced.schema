@@ -1,0 +1,31 @@
+{}
+[(Record Entry) (Watch WatchRequest opens RecordStream)]
+;; ^ constructor
+;;        ^ type
+;;                 ^ constructor
+;;                                  ^ keyword.modifier
+[Recorded (Rejected Rejection)]
+{
+  Topic String
+;; ^ type.alias.definition
+;;       ^ type.builtin
+  Entry { topic Topic tags (Vec Topic) byTopic (Map (Topic RecordIdentifier)) }
+;; ^ type.definition
+;;         ^ property.definition
+;;                          ^ function.macro
+;;                                              ^ function.macro
+  RuntimeEvent [(RecordChanged RecordChanged belongs RecordStream)]
+;; ^ type.enum.definition
+;;                                           ^ keyword.modifier
+  RecordStream (Stream { token SubscriptionToken opened SubscriptionReceipt event RuntimeEvent close SubscriptionToken })
+;; ^ type.stream.definition
+;;              ^ function.macro
+;;                       ^ property.builtin
+  EntryFamily (Family { record Entry table entries key Domain })
+;; ^ type.family.definition
+;;             ^ function.macro
+;;                                         ^ string.special
+;;                                                     ^ constant.builtin
+}
+[(Equivalence [(RuntimeEvent RecordChanged) Topic])]
+;; ^ function.macro

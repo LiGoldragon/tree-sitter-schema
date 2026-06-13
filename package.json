@@ -1,0 +1,30 @@
+{
+  "name": "tree-sitter-schema",
+  "version": "0.1.0",
+  "description": "Tree-sitter grammar and editor highlighting support for authored SEMA schema files",
+  "type": "commonjs",
+  "main": "bindings/node",
+  "files": [
+    "grammar.js",
+    "src",
+    "queries",
+    "editors",
+    "tree-sitter.json"
+  ],
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "test": "tree-sitter test",
+    "build:wasm": "tree-sitter build --wasm -o tree-sitter-schema.wasm"
+  },
+  "keywords": [
+    "tree-sitter",
+    "schema",
+    "sema",
+    "parser",
+    "syntax-highlighting"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "tree-sitter-cli": "^0.26.0"
+  }
+}

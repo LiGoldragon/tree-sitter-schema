@@ -1,0 +1,32 @@
+{
+  "grammars": [
+    {
+      "name": "schema",
+      "camelcase": "Schema",
+      "scope": "source.schema",
+      "path": ".",
+      "file-types": ["schema"],
+      "highlights": ["queries/highlights.scm"],
+      "locals": ["queries/locals.scm"],
+      "injection-regex": "schema"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Tree-sitter grammar and editor highlighting support for authored SEMA schema files",
+    "authors": [
+      {
+        "name": "LiGoldragon"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/LiGoldragon/tree-sitter-schema"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "node": true,
+    "rust": true
+  }
+}
