@@ -16,21 +16,23 @@ the typed macro forms that schema-next currently lowers from NOTA:
 ## Local Checks
 
 ```sh
-nix shell nixpkgs#nodejs --command tree-sitter generate
-tree-sitter test
-tree-sitter highlight test/highlight/advanced.schema
+nix build
+nix flake check
 ```
 
 The parser also accepts schema-next's raw-core single-map files and
 `SchemaMacro` library source so existing `.schema` files do not render as a
 wall of errors while edited.
 
-On NixOS, `tree-sitter build --wasm` may fail if the CLI downloads a generic
-Linux wasi-sdk. The VSCodium settings expect `tree-sitter-schema.wasm`, which
-can be built on a host where the tree-sitter WASM toolchain runs:
+The flake builds `tree-sitter-schema.wasm` through a Nix-native WASI toolchain.
+It does not use tree-sitter's downloaded upstream wasi-sdk. The check path
+regenerates the parser, runs tree-sitter corpus/highlight tests, parses the
+valid schema-next fixture set, byte-compiles the Emacs mode, and checks that
+the WASM artifact is a WebAssembly module.
 
 ```sh
-tree-sitter build --wasm -o tree-sitter-schema.wasm
+nix build .#default
+ls -l result/tree-sitter-schema.wasm
 ```
 
 ## Editor Support
