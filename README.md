@@ -4,7 +4,7 @@ Tree-sitter grammar and editor highlighting support for authored SEMA
 `.schema` files.
 
 This grammar is structural-macro-aware: it parses schema positions and names
-the typed macro forms that schema-next currently lowers from NOTA:
+the typed macro forms that the schema toolchain currently lowers from NOTA:
 
 - root input and output enum vectors
 - namespace struct, enum, alias, stream, and family declarations
@@ -20,14 +20,14 @@ nix build
 nix flake check
 ```
 
-The parser also accepts schema-next's raw-core single-map files and
+The parser also accepts raw-core single-map files and
 `SchemaMacro` library source so existing `.schema` files do not render as a
 wall of errors while edited.
 
 The flake builds `tree-sitter-schema.wasm` through a Nix-native WASI toolchain.
 It does not use tree-sitter's downloaded upstream wasi-sdk. The check path
 regenerates the parser, runs tree-sitter corpus/highlight tests, parses the
-valid schema-next fixture set, byte-compiles the Emacs mode, and checks that
+valid schema fixture set, byte-compiles the Emacs mode, and checks that
 the WASM artifact is a WebAssembly module.
 
 ```sh
